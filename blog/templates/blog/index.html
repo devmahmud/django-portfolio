@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block blogactive %}active{% endblock blogactive %}
+
+{% block title %}Blog{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="pt-3 text-center">
+        <h1>Mahmudul's blog</h1>
+    </div>
+    <br><br><br>
+</div>
+<!-- all posts -->
+<div class="container">
+
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+
+            <h1 class="my-4">Latest posts</h1>
+            <hr>
+
+            <!-- Blog Post -->
+
+            {% for post in posts %}
+            <div class="card mb-4">
+                <img class="card-img-top" src="{{ post.image.url }}" alt="Card image cap" width="750px" height="300px">
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.title }}</h2>
+                    <p class="card-text">{{ post.body|truncatewords:15 }}</p>
+                    <a href="{% url 'blog:detail' post.id %}" class="btn btn-primary">Read More →</a>
+                </div>
+                <div class="card-footer text-muted">
+                    Posted on {{ post.pub_date }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <!-- Search Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Search</h5>
+                <div class="card-body">
+                    <form action="{% url 'blog:index' %}" , method="GET">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            <input type="text" name="query" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="submit">Go!</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Side Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Quotes of the day</h5>
+                <div class="card-body">
+                    <i class="fas fa-quote-left"></i>
+                    {{ quote.quote }}
+                    <i class="fas fa-quote-right"></i>
+                    <div class="text-muted text-right">
+                        {{ quote.author }}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+</div>
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Portfolio{% endblock title %}
+
+{% block content %}
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Hi! i'm Mahmudul Alam</h1>
+        <p class="lead text-muted">Hey i am Mahmudul Alam. I am from Dahaka, Bangladesh. I am a Full Stack Web
+            Developer</p>
+        <p>
+            <a href="mailto:expelmahmud@gmail.com" class="btn btn-primary my-2">Email me</a>
+        </p>
+        <img src="{% static 'maf.jpg' %}" class="img-fluid img-thumbnail" alt="image" height="200px" width="300px">
+    </div>
+</section>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            {% for job in jobs %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ job.image.url }}" alt="image" class="card-image-top" height="288px">
+                    <div class="card-body">
+                        <p class="card-text">{{ job.summary }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
