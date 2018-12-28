@@ -9,11 +9,11 @@
 
 <h2>Installing</h2>
 <pre>open terminal and type</pre>
-<code>git clone https://github.com/devmahmud/django-portfolio.git</code>
-<p>or simply download using the url above<p>
+<code>git clone https://github.com/devmahmud/django-portfolio.git</code><br>
+<h4>or simply download using the url above</h4>
  
 <h2>To migrate the database open terminal in project directory and type</h2>
-<code>python manage.py makemigrations</code>
+<code>python manage.py makemigrations</code><br>
 <code>python manage.py migrate</code>
 
 <h2>To use admin panel you need to create super user using this command </h2>
