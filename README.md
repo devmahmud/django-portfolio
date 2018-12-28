@@ -9,7 +9,9 @@
 
 <h2>Installing</h2>
 <pre>open terminal and type</pre>
-<code>git clone https://github.com/devmahmud/django-portfolio.git</code><br>
+<code>git clone https://github.com/devmahmud/django-portfolio.git</code><br><br>
+
+<code>https://github.com/devmahmud/django-portfolio.git</code><br>
 <h4>or simply download using the url above</h4>
  
 <h2>To migrate the database open terminal in project directory and type</h2>
