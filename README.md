@@ -31,3 +31,11 @@
   Mahmudul alam<br>
   Email: expelmahmud@gmail.com
 </blockquote>
+
+
+<h2>Project snapshot</h2>
+<h3>Home page</h3>
+![portfolio](https://user-images.githubusercontent.com/19981097/50534942-41d07780-0b6e-11e9-88b3-6e170327e0f6.png)
+
+<h3>Blog page</h3>
+![screenshot_2018-12-29 blog](https://user-images.githubusercontent.com/19981097/50534993-bdcabf80-0b6e-11e9-9d02-a40817d4b307.png)
