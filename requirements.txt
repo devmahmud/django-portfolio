@@ -1,1 +1,2 @@
-django==2.1.4
+Django version used
+django == 2.1.4
